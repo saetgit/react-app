@@ -1,11 +1,10 @@
-import Footer from "./components/footer/Footer";
-import Navbar from "./components/navbar/Navbar";
 
-function App() {
+import Home from "./pages/home/Home";
+
+const App = () => {
   return (
     <div>
-      < Navbar/>
-      <Footer/>
+      <Home />
     </div>
   );
 }
