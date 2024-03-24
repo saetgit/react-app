@@ -23,7 +23,7 @@ function Home() {
         <h2> مقالات جدید</h2>
         <div className={styled.articles}>
           {articles.map((article) => (
-            <Article />
+            <Article key={article.id} articles={article} />
           ))}
         </div>
       </div>

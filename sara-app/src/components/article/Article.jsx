@@ -1,11 +1,12 @@
 import styled from "./article.module.css";
 import article from "./../../assets/images/article.jpg";
-function Article() {
+function Article(props) {
+  console.log(props.articles);
   return (
     <div className={styled.articlWrapper}>
-      <img src={article} />
-      <h3>متغیرها در جاوا اسکریپت</h3>
-      <p>خواندن در ۵ دقیقه</p>
+      <img src={props.articles.imageUrl} />
+      <h3>{props.articles.title}</h3>
+      <p>خواندن در {props.articles.readingTime} دقیقه</p>
     </div>
   );
 }
