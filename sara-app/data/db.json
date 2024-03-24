@@ -1,0 +1,19 @@
+{
+  "articles": {
+    "status": true,
+    "data": [
+      {
+        "id": 1,
+        "imageUrl": "",
+        "title": "عنوان تستی ۱",
+        "readingTime": 5
+      },
+      {
+        "id": 1,
+        "imageUrl": "",
+        "title": "عنوان تستی ۲",
+        "readingTime": 3
+      }
+    ]
+  }
+}
