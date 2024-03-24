@@ -2,15 +2,14 @@ import { useEffect, useState } from "react";
 import Article from "../../components/article/Article";
 import Navbar from "../../components/navbar/Navbar";
 import styled from "./home.module.css";
-import axios from "axios"
+import axios from "axios";
 function Home() {
   const [articles, serArticles] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:8000/articles")
-    .then(result=>{
-      serArticles(result.data.data)
-    })
-  },[]);
+    axios.get("http://localhost:8000/articles").then((result) => {
+      serArticles(result.data.data);
+    });
+  }, []);
 
   return (
     <div className={styled.homeWrapper}>
