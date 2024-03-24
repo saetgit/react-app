@@ -1,21 +1,17 @@
+import { useEffect, useState } from "react";
 import Article from "../../components/article/Article";
 import Navbar from "../../components/navbar/Navbar";
 import styled from "./home.module.css";
+import axios from "axios"
 function Home() {
-  let articles = [
-    {
-      id: 1,
-      imageUrl: "",
-      title: "عنوان تستی۱",
-      readingTime: 5,
-    },
-    {
-      id: 2,
-      imageUrl: "",
-      title: "عنوان ggg",
-      readingTime: 4,
-    },
-  ];
+  const [articles, serArticles] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:8000/articles")
+    .then(result=>{
+      serArticles(result.data.data)
+    })
+  },[]);
+
   return (
     <div className={styled.homeWrapper}>
       <Navbar title="سارا بلاگ" />

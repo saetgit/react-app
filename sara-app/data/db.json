@@ -1,16 +1,17 @@
 {
   "articles": {
     "status": true,
+    "message":"success",
     "data": [
       {
         "id": 1,
-        "imageUrl": "",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOgmS8pHyqR_4DfV2CV6lrvN2nTnE2W7SZGw&usqp=CAU",
         "title": "عنوان تستی ۱",
         "readingTime": 5
       },
       {
-        "id": 1,
-        "imageUrl": "",
+        "id": 2,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxCHD8VMkgEADAx68M1JuZj5LG86tAX-TyTQ&usqp=CAU",
         "title": "عنوان تستی ۲",
         "readingTime": 3
       }
