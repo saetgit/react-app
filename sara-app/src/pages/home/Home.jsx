@@ -3,6 +3,7 @@ import Article from "../../components/article/Article";
 import Navbar from "../../components/navbar/Navbar";
 import styled from "./home.module.css";
 import axios from "axios";
+import Footer from "../../components/footer/Footer";
 function Home() {
   const [articles, serArticles] = useState([]);
   useEffect(() => {
@@ -22,6 +23,7 @@ function Home() {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

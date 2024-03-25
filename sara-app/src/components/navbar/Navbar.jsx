@@ -1,4 +1,6 @@
 import styled from "./navbar.module.css";
+import { Link } from "react-router-dom";
+
 function Navbar(props) {
   return (
     <div className={styled.headerWrapper}>
@@ -6,9 +8,13 @@ function Navbar(props) {
         <div className={styled.header}>
           <h3>{props.title}</h3>
           <ul>
-            <li>لیست مقاله</li>
+            <li>
+              <Link to="/">لیست مقاله</Link>
+            </li>
             <li>مقاله جدید</li>
-            <li>درباره ما</li>
+            <li>
+              <Link to="/about">درباره ما</Link>
+            </li>
           </ul>
         </div>
       </div>

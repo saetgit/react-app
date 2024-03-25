@@ -1,4 +1,10 @@
-.header{
-    background-color: rgb(57, 150, 28);
+.footer{
+    background-color: #817e7e;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 200px;
+    margin-top: 20px;
 }

@@ -1,7 +1,7 @@
 {
   "articles": {
     "status": true,
-    "message":"success",
+    "message": "success",
     "data": [
       {
         "id": 1,
@@ -14,6 +14,42 @@
         "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxCHD8VMkgEADAx68M1JuZj5LG86tAX-TyTQ&usqp=CAU",
         "title": "عنوان تستی ۲",
         "readingTime": 3
+      },
+      {
+        "id": 3,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOgmS8pHyqR_4DfV2CV6lrvN2nTnE2W7SZGw&usqp=CAU",
+        "title": "عنوان تستی 3",
+        "readingTime": 9
+      },
+      {
+        "id": 4,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEkuWBgffBVJZ82tPcPHV0yyffKj7SbyVi-fUoujUOggUnqAcdPPq5hJJG4LgFECIeXBs&usqp=CAU",
+        "title": "عنوان تستی 4",
+        "readingTime": 1
+      },
+      {
+        "id": 5,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlo4y1NfQbmYq255HNPgfAjtoWjk9aly-gBotkLdRaw3B-bHGazlSoaiD75-aVFMlY32Q&usqp=CAU",
+        "title": "عنوان تستی 5",
+        "readingTime": 6
+      },
+      {
+        "id": 6,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9moSrW8haLuq68R0v4wW73Lc46vbF8JiQtrGXsYNPLjb3DfiEVHRaL3y7YEmYryDvnho&usqp=CAU",
+        "title": "عنوان تستی 6",
+        "readingTime": 56
+      },
+      {
+        "id": 7,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE87kUSjblZjh0P8s7ihWqijt2r-aGsd4eSbEHnOzfKwWOpwFg-nxUB1pLl-PkJFUk58A&usqp=CAU",
+        "title": "عنوان تستی 7",
+        "readingTime": 5
+      },
+      {
+        "id": 8,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiPRpnmm1s0X2-nzu3aCsezOG7yo3CUv94dGAbqyLq7YFclZyoK-OxU6vx5_Ep4-N6MIY&usqp=CAU",
+        "title": "عنوان تستی 8",
+        "readingTime": 15
       }
     ]
   }
