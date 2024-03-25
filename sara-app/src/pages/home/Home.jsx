@@ -7,26 +7,34 @@ import Footer from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
 function Home() {
   const [articles, serArticles] = useState([]);
+  const [isLoading, setisLoading] = useState(false);
+
   useEffect(() => {
+    setisLoading(true);
     axios.get("http://localhost:8000/articles").then((result) => {
       serArticles(result.data);
+      setisLoading(false);
     });
   }, []);
 
   return (
-  <div className={styled.homeWrapper}>
+    <div className={styled.homeWrapper}>
       <Navbar title="سارا بلاگ" />
       <div className="container">
         <h2> مقالات جدید</h2>
-        <div className={styled.articles}>
-          {articles.map((article) => (
-            <Link to={`/article/${article.id}`}>
-              <Article key={article.id} articles={article} />
-            </Link>
-          ))}
+        {isLoading ? (
+          <p>لطفا صبر کنید...</p>
+        ) : (
+          <div className={styled.articles}>
+            {articles.map((article) => (
+              <Link to={`/article/${article.id}`}>
+                <Article key={article.id} articles={article} />
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </div>
   );
 }

@@ -4,40 +4,52 @@ import pic from "../../assets/images/article.jpg";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Footer from "../../components/footer/Footer";
 
 function ArticlePage() {
   const [article, setArticle] = useState({});
+  const [isLoading, setisLoading] = useState(false);
 
   const param = useParams();
 
   useEffect(() => {
+    setisLoading(true);
     axios
       .get(`http://localhost:8000/articles/${param.id}`)
       .then((result) => {
-        setArticle(result.data)
+        setArticle(result.data);
+        setisLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setisLoading(false);
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div>
+    <>
       <Navbar />
       <div className={styled.articlePage}>
         <div className="container">
-          <h2>{article.title}</h2>
-          <div className={styled.info}>
-            <span>تاریخ:{article.date} </span>
-            <span>نویسنده:{article.author}</span>
-            <span>زمان :{article.readingTime} </span>
-          </div>
-          <img src={article.imageUrl} alt="" />
-          <p>{article.content}</p>
+          {isLoading ? (
+            <p>لطفا صبر کنید...</p>
+          ) : (
+            <>
+              <h2>{article.title}</h2>
+              <div className={styled.info}>
+                <span>تاریخ:{article.date} </span>
+                <span>نویسنده:{article.author}</span>
+                <span>زمان :{article.readingTime} </span>
+              </div>
+              <img src={article.imageUrl} alt="" />
+              <p>{article.content}</p>
+            </>
+          )}
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 
