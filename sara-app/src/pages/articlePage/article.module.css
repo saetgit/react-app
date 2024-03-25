@@ -1,0 +1,28 @@
+.articlePage {
+    text-align: right;
+
+}
+.articlePage h2 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.articlePage img {
+    margin-top: 30px;
+}
+.articlePage .info span {
+    color: #3a3a3a;
+    text-align: right;
+    margin-right: 10px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    text-align: left;
+    direction: rtl;
+    margin-top: 30px;
+
+}
+.articlePage p {
+    color: #3a3a3a;
+    margin-top: 30px;
+
+}
+
