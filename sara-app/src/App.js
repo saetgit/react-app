@@ -4,10 +4,12 @@ import ArticlePage from "./pages/articlePage/ArticlePage";
 import CreateArticle from "./pages/createArticle/CreateArticle";
 import Home from "./pages/home/Home";
 import { Route,Routes } from "react-router-dom";
+import NotFound from "./pages/notFound/NotFound";
 const App = () => {
   return (
     <div>
       <Routes>
+      <Route path="*" element={<NotFound/>}/>
         <Route path="/" element={<Home/>}/>
         <Route path="/article/:id" element={<ArticlePage/>}/>
         <Route path="/createArticle" element={<CreateArticle/>}/>
