@@ -2,19 +2,45 @@ import { useState } from "react";
 import Input from "../../components/Input/Input";
 import Navbar from "../../components/navbar/Navbar";
 import styled from "./createArticle.module.css";
+import Textarea from "../../components/textarea/Textarea";
+import axios from "axios";
 function CreateArticle() {
-  const  [article, setArticle] = useState({
+  const [article, setArticle] = useState({
     title: "",
     date: "",
     readingTime: "",
     athor: "",
+    message: "",
+    imageUrl:""
   });
+
   const handelChangeArticle = (e) => {
     setArticle((prevState) => ({
-        ...prevState,
-        [e.target.name]: e.target.value,
+      ...prevState,
+      [e.target.name]: e.target.value,
     }));
   };
+
+  const handelChangeArticleMessage = (e) => {
+    setArticle((prevState) => ({
+      ...prevState,
+      message: e.target.value,
+    }));
+  };
+  const handelNewArticle = () => {
+    axios.post("http://localhost:8000/articles",{
+      id:9,
+      imageUrl:article.imageUrl,
+      title:article.title,
+      readingTime:article.readingTime,
+      date:article.date,
+      athor:article.athor,
+      content:article.message,
+     
+    })
+
+  }
+  
   console.log(article);
   return (
     <>
@@ -46,6 +72,16 @@ function CreateArticle() {
             type="text"
             handelChange={handelChangeArticle}
           />
+          <Input
+            label="آدرس تصویر"
+            name="imageUrl"
+            type="text"
+            handelChange={handelChangeArticle}
+          />
+          <Textarea label="متن" handelChange={handelChangeArticleMessage} />
+          <div>
+            <button onClick={handelNewArticle}>ایجاد یک مقاله جدید</button>
+          </div>
         </div>
       </div>
     </>

@@ -1,7 +1,18 @@
 .CreateArticle{
-
+text-align: right;
 }
 .CreateArticle h2{
     text-align: right;
     margin-top: 20px;
+}
+
+.CreateArticle button{
+    text-align: right;
+    margin-top: 20px;
+    background-color: blue;
+    color: #fff;
+    height: 40px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
 }
