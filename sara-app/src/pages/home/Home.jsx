@@ -5,6 +5,7 @@ import styled from "./home.module.css";
 import axios from "axios";
 import Footer from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
+import Spinner from "../../components/spinner/Spinner";
 function Home() {
   const [articles, serArticles] = useState([]);
   const [isLoading, setisLoading] = useState(false);
@@ -20,11 +21,12 @@ function Home() {
   return (
     <div className={styled.homeWrapper}>
       <Navbar title="سارا بلاگ" />
+
       <div className="container">
         <h2> مقالات جدید</h2>
         {isLoading ? (
-          <p>لطفا صبر کنید...</p>
-        ) : (
+         <Spinner/>
+         ) : (
           <div className={styled.articles}>
             {articles.map((article) => (
               <Link to={`/article/${article.id}`}>

@@ -1,10 +1,10 @@
 import Navbar from "../../components/navbar/Navbar";
 import styled from "./article.module.css";
-import pic from "../../assets/images/article.jpg";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Footer from "../../components/footer/Footer";
+import Spinner from "../../components/spinner/Spinner";
 
 function ArticlePage() {
   const [article, setArticle] = useState({});
@@ -33,7 +33,7 @@ function ArticlePage() {
       <div className={styled.articlePage}>
         <div className="container">
           {isLoading ? (
-            <p>لطفا صبر کنید...</p>
+            <Spinner/>
           ) : (
             <>
               <h2>{article.title}</h2>
