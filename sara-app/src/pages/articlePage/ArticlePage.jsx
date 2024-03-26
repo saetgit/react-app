@@ -39,7 +39,7 @@ function ArticlePage() {
               <h2>{article.title}</h2>
               <div className={styled.info}>
                 <span>تاریخ:{article.date} </span>
-                <span>نویسنده:{article.author}</span>
+                <span>نویسنده:{article.athor}</span>
                 <span>زمان :{article.readingTime} </span>
               </div>
               <img src={article.imageUrl} alt="" />

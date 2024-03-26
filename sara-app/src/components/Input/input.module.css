@@ -1,0 +1,17 @@
+.inputPage{
+    text-align: right;
+}
+
+.inputPage label{
+    display: block;
+    margin-top: 10px;
+
+}
+.inputPage input{
+    display: block;
+    width: 100%;
+    height: 30px;
+    text-align: right;
+    margin-top: 10px;
+
+}
