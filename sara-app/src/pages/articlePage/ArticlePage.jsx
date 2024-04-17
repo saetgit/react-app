@@ -29,7 +29,7 @@ function ArticlePage() {
 
   return (
     <>
-      <Navbar />
+      <Navbar title="سارا بلاگ" />
       <div className={styled.articlePage}>
         <div className="container">
           {isLoading ? (

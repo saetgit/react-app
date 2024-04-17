@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import styled from "./navbar.module.css";
 import { Link } from "react-router-dom";
+import { AppContext } from "../../App";
 
 function Navbar(props) {
+  const {setIsLogin}=useContext(AppContext)
   return (
     <div className={styled.headerWrapper}>
       <div className="container">
@@ -14,6 +17,9 @@ function Navbar(props) {
             <li> <Link to="/createArticle">مقاله جدید</Link></li>
             <li>
               <Link to="/about">درباره ما</Link>
+            </li>
+            <li>
+              <span onClick={()=>setIsLogin(false)}> خروج</span>
             </li>
           </ul>
         </div>
