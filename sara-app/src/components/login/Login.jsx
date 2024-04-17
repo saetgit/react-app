@@ -8,7 +8,6 @@ function Login() {
 
   return (
     <div>
-      <h1>ورود</h1>
       <div className={styled.Login}>
         <Input label="نام کاربری" name="title" type="text" />
         <Input label=" رمز عبور" name="title" type="text" />
